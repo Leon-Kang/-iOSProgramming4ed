@@ -15,6 +15,9 @@
 		6B1EA4B21BB69949001C9FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1EA4B01BB69949001C9FBC /* LaunchScreen.storyboard */; };
 		6B1EA4BD1BB69949001C9FBC /* QuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1EA4BC1BB69949001C9FBC /* QuizTests.m */; };
 		6B1EA4C81BB69949001C9FBC /* QuizUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1EA4C71BB69949001C9FBC /* QuizUITests.m */; };
+		6B1EA4D61BB6CC0C001C9FBC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1EA4D51BB6CC0C001C9FBC /* Icon@2x.png */; settings = {ASSET_TAGS = (); }; };
+		6B1EA4D91BB6CCF0001C9FBC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1EA4D71BB6CCF0001C9FBC /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		6B1EA4DA1BB6CCF0001C9FBC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1EA4D81BB6CCF0001C9FBC /* Default@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		6B1EA4C31BB69949001C9FBC /* QuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1EA4C71BB69949001C9FBC /* QuizUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizUITests.m; sourceTree = "<group>"; };
 		6B1EA4C91BB69949001C9FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B1EA4D51BB6CC0C001C9FBC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../iOSProgramming4ed-master/00-Resources/Icon@2x.png"; sourceTree = "<group>"; };
+		6B1EA4D71BB6CCF0001C9FBC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../iOSProgramming4ed-master/00-Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B1EA4D81BB6CCF0001C9FBC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../iOSProgramming4ed-master/00-Resources/Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,9 @@
 		6B1EA4A21BB69949001C9FBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B1EA4D71BB6CCF0001C9FBC /* Default-568h@2x.png */,
+				6B1EA4D81BB6CCF0001C9FBC /* Default@2x.png */,
+				6B1EA4D51BB6CC0C001C9FBC /* Icon@2x.png */,
 				6B1EA4A31BB69949001C9FBC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -246,8 +255,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1EA4DA1BB6CCF0001C9FBC /* Default@2x.png in Resources */,
 				6B1EA4B21BB69949001C9FBC /* LaunchScreen.storyboard in Resources */,
+				6B1EA4D61BB6CC0C001C9FBC /* Icon@2x.png in Resources */,
 				6B1EA4AF1BB69949001C9FBC /* Assets.xcassets in Resources */,
+				6B1EA4D91BB6CCF0001C9FBC /* Default-568h@2x.png in Resources */,
 				6B1EA4AD1BB69949001C9FBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +511,7 @@
 				6B1EA4CE1BB69949001C9FBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B1EA4CF1BB69949001C9FBC /* Build configuration list for PBXNativeTarget "QuizTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +520,7 @@
 				6B1EA4D11BB69949001C9FBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B1EA4D21BB69949001C9FBC /* Build configuration list for PBXNativeTarget "QuizUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +529,7 @@
 				6B1EA4D41BB69949001C9FBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
