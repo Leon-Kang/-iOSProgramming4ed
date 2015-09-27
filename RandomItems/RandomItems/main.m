@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNRItem.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -34,6 +35,23 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@",item);
         }
         // 注: 快速枚举有限制，如果要在循环中加入或删除对象，会报错。
+        
+        // 构建一个BNRItem对象
+        BNRItem *item = [[BNRItem alloc] init];
+        
+//        [item setItemName:@"Red Sofa"];
+//        [item setSeriaNumber:@"A1B2C"];
+//        [item setValueInDollars:200];
+//        NSLog(@"%@ %@ %@ %d",[item itemName],[item dateCreated],[item seriaNumber],[item valueInDollars]);
+        
+        // 使用点语法
+        item.itemName = @"Red Sofa";
+        item.seriaNumber = @"A1B2C";
+        item.valueInDollars = 200;
+        
+        NSLog(@"%@ %@ %@ %d",item.itemName,item.dateCreated,item.seriaNumber,item.valueInDollars);
+        
+
         
         // 释放items所指向的NSMutableArray对象
         items = nil;
