@@ -57,7 +57,7 @@
     NSString *descriptionString = [[NSString alloc] initWithFormat:
                                    @"%@ (%@): Worth $%d, recorded on %@",
                                    self.itemName,
-                                   self.seriaNumber,
+                                   self.serialNumber,
                                    self.valueInDollars,
                                    self.dateCreated];
     
@@ -90,41 +90,18 @@
     return [self initWithItemName:@"Item"];
 }
 
+
 - (instancetype)initWithItemName:(NSString *)name
 {
     return [self initWithItemName:name valueInDollars:0 serialNumber:@""];
 }
 
-- (void)setItemName:(NSString *)str
+- (void)setContainedItem:(BNRItem *)containedItem
 {
-    _itemName = str;
-}
-- (NSString *)itemName
-{
-    return _itemName;
+    _containedItem = containedItem;
+    self.containedItem.container = self;
 }
 
-- (void)setSeriaNumber:(NSString *)str
-{
-    _serialNumber = str;
-}
-- (NSString *)seriaNumber
-{
-    return _serialNumber;
-}
 
-- (void)setValueInDollars:(int)v
-{
-    _valueInDollars = v;
-}
-- (int)valueInDollars
-{
-    return _valueInDollars;
-}
-
-- (NSData *)dateCreated
-{
-    return _dateCreated;
-}
 
 @end

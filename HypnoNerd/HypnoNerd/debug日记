@@ -1,0 +1,6 @@
+2015年10月04日21:15:52
+做这个项目到第六章的时候需要加载一个名为rvc的xib文件，代码详见AppDelegate.m文件。然后便开始了debug之旅，书上还是xcode4版本，我使用的已经是xcode7.有些地方有很大的不同，在上做一个项目的时候我已经领教过了······。这次是需要加载一个xib文件为rootViewController，然后与另一个对象来回切换。结果····无限崩溃啊我日！看看代码没有问题啊！看看xib，没有问题啊····。用main.storyboad做了一遍，完全正常啊！再指向xib文件，崩溃！切换到就hvc正常。
+错误提示：『A view can only be associated with at most one view controller at a time!』
+找了百度······好吧我错了，去毛线的百度上找！去了谷歌，发现有个哥们出过这个错误，在stack overflow上找到几个一样错误提示的。参考了一下，发现并不是一个问题····。不过也非常感谢这些答案了。
+我又重新仔细地理解了一下系统提示的这句话······。然后我打开xib文件，正常，正常，正常···等等！View Controller，我看见了一个View Controller包含着我的View·····。这尼玛不就是冲突的原因了么···真是手贱啊，习惯顺手先加载一个ViewController啊！
+不··能··随··便··加··ViewController·········。
