@@ -38,7 +38,7 @@
 // Hypnosisiter被触摸时会收到该信息
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%@ was touched",self);
+    // NSLog(@"%@ was touched",self);
     
     // 获取三个0到1之间的数字
     float red = (arc4random() % 100) / 100.0;

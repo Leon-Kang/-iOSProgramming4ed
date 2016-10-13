@@ -23,12 +23,14 @@
     
     
     
-    // 获取指向NSBundle对象的指针，该NSBundle对象代表应用的主程序包
+    /* // 获取指向NSBundle对象的指针，该NSBundle对象代表应用的主程序包
     NSBundle *appBundle = [NSBundle mainBundle];
     
     // 告诉初始化方法在appBundle中查找ReminderViewController.xib文件
     
-    ReminderViewController *rvc = [[ReminderViewController alloc] initWithNibName:@"ReminderViewController" bundle:appBundle];
+    ReminderViewController *rvc = [[ReminderViewController alloc] initWithNibName:@"ReminderViewController" bundle:appBundle];  */
+    
+    ReminderViewController *rvc = [[ReminderViewController alloc] init];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = @[hvc,rvc];
@@ -60,5 +62,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
+
 
 @end

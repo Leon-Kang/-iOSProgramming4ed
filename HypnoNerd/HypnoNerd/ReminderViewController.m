@@ -16,9 +16,10 @@
 
 @implementation ReminderViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad{
+    // 必须调用父类的viewDidLoad
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // NSLog(@"ReminderViewController loaded its view.");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
+}
 /*
 #pragma mark - Navigation
 
@@ -36,9 +41,16 @@
 }
 */
 
+
 - (IBAction)addReminder:(id)sender{
-    NSData *date = self.datePicker.date;
-    NSLog(@"Setting a reminder for %@",date);
+    NSDate *date = self.datePicker.date;
+    // NSLog(@"Setting a reminder for %@",date);
+    
+    UILocalNotification *note = [[UILocalNotification alloc] init];
+    note.alertBody = @"Hypnotize me!";
+    note.fireDate = date;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:note];
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -61,23 +73,6 @@
     
     return self;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
